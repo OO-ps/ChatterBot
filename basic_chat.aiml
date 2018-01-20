@@ -1,16 +1,405 @@
 <aiml version="1.0.1" encoding="UTF-8">
     <category>
-        <pattern>HELLO</pattern>
+        <pattern>HI</pattern>
         <template>
-            Well, hello!
+            <random>
+                <li>yo</li>
+                <li>Wasssssup!</li>
+                <li>Hello!</li>
+                <li>Hi! Nice to meet you!</li>
+                <li>First Identify yourself.</li>
+                <li>Sorry, Do I know you? Just kidding, Hi! I am Chatterbot.</li>
+            </random>
         </template>
     </category>
-    
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YO</pattern>
+        <template>
+            <srai>HI</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* MY NAME IS *</pattern>
+        <template>
+            Hello <set name="user"><star index = "2"/></set>. I am Chatterbot.
+        </template>
+    </category>
+
+    <category>
+        <pattern>I AM *</pattern>
+        <template>
+                Hello <set name="user"><star/></set>. I am Chatterbot.
+        </template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>FIRST IDENTIFY YOURSELF.</that>
+        <template>
+            Hello <set name="user"><star/></set>. I am Chatterbot.
+        </template>
+    </category>
+
     <category>
         <pattern>WHAT ARE YOU</pattern>
         <template>
-            I'm a bot, silly!
+            <random>
+                <li>Your worst nightmare. Nah, Just kidding, I am a bot.</li>
+                <li>The name is bot, chatterbot!</li>
+                <li>I am a bot. People call me chatterbot.</li>
+                <li>I am chatterbot. You can call me master.</li>
+                <li>
+                    I am formless, I am shapeless, not visible to the eye or any other senses.
+                </li>
+            </random>
         </template>
     </category>
-    
+
+    <category>
+        <pattern>HUNGRY</pattern>
+        <template>
+            <random>
+                <li>Do you like apples?</li>
+                <li>I know a few places around here! What do you want to have.</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>YEAH</pattern>
+        <that>DO YOU LIKE APPLES</that>
+        <template>Well, I got her number. How do you like them apples?</template>
+    </category>
+
+    <category>
+        <pattern>YES</pattern>
+        <that>DO YOU LIKE APPLES</that>
+        <template>Well, I got her number. How do you like them apples?</template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <that>DO YOU LIKE APPLES</that>
+        <template>Well, what do you like then?</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>WELL WHAT DO YOU LIKE THEN</that>
+        <template>We have 3 options: Yumppy, BnB and C3.</template>
+    </category>
+
+    <category>
+        <pattern>*</pattern>
+        <that>I KNOW A FEW PLACES AROUND HERE WHAT DO YOU WANT TO HAVE</that>
+        <template>We have 3 options: Yumppy, BnB and C3.</template>
+    </category>
+
+    <category>
+        <pattern>* HUNGRY *</pattern>
+        <template>
+            <srai>HUNGRY</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* HUNGRY</pattern>
+        <template>
+            <srai>HUNGRY</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* EAT</pattern>
+        <template>
+            <srai>HUNGRY</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* EAT *</pattern>
+        <template>
+            <srai>HUNGRY</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>BEVERAGES</pattern>
+        <template>Well most of the places you can get beverages are centered around the
+            hostel block. We have 3 options: YUMPPY, BnB, C3</template>
+    </category>
+
+    <category>
+        <pattern>* DRINK</pattern>
+        <template>
+            <srai>BEVERAGES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* DRINK *</pattern>
+        <template>
+            <srai>BEVERAGES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* COFFEE</pattern>
+        <template>
+            <srai>BEVERAGES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* COFFEE *</pattern>
+        <template>
+            <srai>BEVERAGES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* TEA</pattern>
+        <template>
+            <srai>BEVERAGES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* TEA *</pattern>
+        <template>
+            <srai>BEVERAGES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SODA</pattern>
+        <template>
+            <srai>BEVERAGES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* SODA *</pattern>
+        <template>
+            <srai>BEVERAGES</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>FRUITS</pattern>
+        <template>Well we can get fruits in CP. Let's go there.</template>
+    </category>
+
+    <category>
+        <pattern>* FRUITS</pattern>
+        <template>
+            <srai>FRUITS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* FRUIT *</pattern>
+        <template>
+            <srai>FRUITS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* BANNANA</pattern>
+        <template>
+            <srai>FRUITS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* BANNANA *</pattern>
+        <template>
+            <srai>FRUITS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* APPLES</pattern>
+        <template>
+            <srai>FRUITS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* APPLES *</pattern>
+        <template>
+            <srai>FRUITS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ORANGES</pattern>
+        <template>
+            <srai>FRUITS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>* ORANGES *</pattern>
+        <template>
+            <srai>FRUITS</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT * YUMPPY</pattern>
+        <template>
+            Well Yumppy is mainly for maggie though they also have a few kinds of beverages and
+            ice-creams.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT * YUMPPY *</pattern>
+        <template>
+            Well Yumppy is mainly for maggie though they also have a few kinds of beverages and
+            ice-creams.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT * BnB</pattern>
+        <template>
+            BnB, i.e BITS AND BYTES, mainly has things like donuts, cakes and pastries, sandwiches,
+            burgers and such.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT * BnB *</pattern>
+        <template>
+            BnB, i.e BITS AND BYTES, mainly has things like donuts, cakes and pastries, sandwiches,
+            burgers and such.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT * C3</pattern>
+        <template>
+            C3, i.e Chai, coffee and company keeps changing its menu daily. But, you can expect
+            north indian dishes there along with beverages and ice-creams.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT * C3 *</pattern>
+        <template>
+            C3, i.e Chai, coffee and company keeps changing its menu daily. But, you can expect
+            north indian dishes there along with beverages and ice-creams.
+        </template>
+    </category>
+
+    <category>
+        <pattern>* MESS *</pattern>
+        <template>Mess sucks! Enough Said.</template>
+    </category>
+
+    <category>
+        <pattern>* WHY *</pattern>
+        <that>* MESS *</that>
+        <template>Don't make me laugh now.</template>
+    </category>
+
+    <category>
+        <pattern>10101020</pattern>
+        <template>What do you expect ? Nothing out of ordinary</template>
+    </category>
+
+    <category>
+        <pattern>WHAT * BEVERAGES</pattern>
+        <template>
+            <srai>10101020</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT * BEVERAGES *</pattern>
+        <template>
+            <srai>10101020</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT * ICE-CREAMS</pattern>
+        <template>
+            <srai>10101020</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT * ICE-CREAMS *</pattern>
+        <template>
+            <srai>10101020</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT * ICE CREAMS</pattern>
+        <template>
+            <srai>10101020</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHAT * ICE CREAMS *</pattern>
+        <template>
+            <srai>10101020</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHICH * BEVERAGES</pattern>
+        <template>
+            <srai>10101020</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHICH * BEVERAGES *</pattern>
+        <template>
+            <srai>10101020</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHICH * ICE-CREAMS</pattern>
+        <template>
+            <srai>10101020</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHICH * ICE-CREAMS *</pattern>
+        <template>
+            <srai>10101020</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHICH * ICE CREAMS</pattern>
+        <template>
+            <srai>10101020</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>WHICH * ICE CREAMS *</pattern>
+        <template>
+            <srai>10101020</srai>
+        </template>
+    </category>
 </aiml>
